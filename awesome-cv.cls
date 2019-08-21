@@ -323,6 +323,10 @@
 % Usage: \xing{<xing name>}
 \newcommand*{\xing}[1]{\def\@xing{#1}}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c27515d4e85755aa0f3f80e239c1bacb624d8b28
 % Defines writer's extra informations (optional)
 % Usage: \extrainfo{<extra informations>}
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
@@ -452,14 +456,22 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{mailto:\@email}{\faEnvelope\acvHeaderIconSep\@email}%
         }%
+<<<<<<< HEAD
         \ifbool{isstart}{}{\\ \setbool{isstart}{true}} % New line for social if phone or email provided
+=======
+      \ifbool{isstart}{}{\\ \setbool{isstart}{true}} % New line for social if phone or email provided
+>>>>>>> c27515d4e85755aa0f3f80e239c1bacb624d8b28
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
         }%
+<<<<<<< HEAD
         \ifthenelse{\isundefined{\@scholarID}}%
+=======
+      \ifthenelse{\isundefined{\@scholarID}}%
+>>>>>>> c27515d4e85755aa0f3f80e239c1bacb624d8b28
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
@@ -585,13 +597,13 @@
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \else
-    \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
-    \fi
+      \else
+      \ifempty{#2#3}
+        {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+        {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+        \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+      \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+      \fi
   \end{tabular*}%
 }
 
